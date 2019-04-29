@@ -1,6 +1,121 @@
 <html>
-<h2 id="desc" class="list">Vocabulary for the representation of the census of inhabitants.: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="desc" class="list">Vocabulary for the representation of the census of inhabitants: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+Figure 1 shows the classes and properties of this vocabulary. 
+</span>
+<center><img src="resources/images/PadronHabitantes.png"><figcaption>Figura 1. - Vocabulary for the representation of data from the census of inhabitants</figcaption>
+</center>
+<span class="markdown">
+As aforementioned, the scope of this vocabulary is the representation of data from the census of inhabitants which are obtained from the relation of inhabitants files used by data exchange between the City Hall and the Instituto Nacional de Estadística. The vocabulary defines several classes and properties that allow describing such data, especially reusing the class [schema:Person](http://schema.org/Person), as well as their associated properties in order to represent the inhabitant.
 
+Several SKOS concept schemes have been also used to represent some of the classifications from this domain. Figure 1 shows some of these relationships with SKOS concept schemes. In the case of the type of variation, represented by the [espad:tipoVariacion](#tipoVariacion) property, several possibilities exist to represent such type of data, such as register, ungerister and modification, and the associated reasons for each variation.
+</span>
+
+<h3>3.1 Ejemplos de uso<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
+<span class="markdown">
+  Some examples are provided next with the objective of facilitating the understanding of how the core classes and properties of the vocabulary may be used.
+
+  We will first start with the representation of a variation. This will be represented as an instance of [espad:VariacionHabitante](#VariacionHabitante) which is associated to an inhabitant, involved in the variation, with the property [espad:registraHabitante](#registraHabitante). Next, the reason of this variation is represented by the property [espad:tipoVariacion](#tipoVariacion), which links the variation whith their reason, , according to a SKOS codelist that encodes the types of variation, for example in our example it is an Regiter by Birth (ANA). Finally, the variation date is represented by the property [espad:fechaVariacion](#fechaVariacion). 
+</span>
+<pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/variacion-habitante/8189e97dd02f6356aca24dcb709437b39545ba4e&gt; a espad:VariacionHabitante ;
+  espad:registraHabitante &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/habitante/a209fd32c09cf5d06e4e6aedf8b81924b4e981f3&gt; ;
+  espad:fechaVariacion "19840918"^^xsd:date ;
+  espad:tipoVariacion &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-variacion/ANA&gt; ;
+  espad:numeroHojaPadronal "105" ; .
+</pre>
+<span class="markdown">
+  Next, we represent the inhabitant related with the previous Register by Birth definition. This will be represented as an instance of [espad:Habitante](#Habitante) which is declared as active, by  means of the property [espad:activo]. This property is a boolean which allows representing if the inhabitant data are valid or not within the census. Then, other inhabitant data are described, such as the birth date ([schema:birthDay](http://schema.org/birthDay)), gender ([schema:gender](http://schema.org/gender)), or the City hall identification number ([espad:numeroIdentificacionAyuntamiento](#numeroIdentificacionAyuntamiento)). 
+
+  In addition, birht province and municipality of the inhabitant are defined by the properties [espad:provinciaNacimiento](#provinciaNacimiento) y [espad:municipioNacimiento](#municipioNacimiento) respectively. The details where the inhabitant resides are also specified, in our example they are defined by the address, province, municipality and district, represented by the properties [schema:address](http://schema.org/address), [espad:provinciaResidencia](#provinciaResidencia), [espad:municipioResidencia](#municipioResidencia) y [espad:distritoResidencia](#distritoResidencia) respecitvely. As is depicted in Figure 1, the postal address and the territorial entities details of the inhabitant residence are represented by the reused classess and properties from the [direccion-postal](http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#) and [territorio](http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#) vocabularies. Therefore, further details of representation of all these concepts can be checked in the documentation available for each vocabulary.
+
+  Finally, the educational level, type of document of identity, and the type of premise are represented. Each of these data is described by the properties ([espad:nivelEstudios](#nivelEstudios), [espad:tipoDocumentoIdentidad](#tipoDocumentoIdentidad), [espad:tipoLocalResidencia](#tipoLocalResidencia)) which links the inhabitant whith the list of concepts that encondes each type. For example, the educational level of our example corresponds to code 00 wich means "Not applicable for being under 16 years old". Also, the type of identity document provided for this variation has been described, which corresponds in this case to code 1, the DNI (Spanish ID number). Finally, we specify the type of premise where the inhabitant resides, in our example it refers to a dwelling.
+
+</span>
+  <pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/habitante/a209fd32c09cf5d06e4e6aedf8b81924b4e981f3&gt; a espad:Habitante ;
+  espad:activo "true"^^xsd:boolean ;
+  schema:birthDate "19840520"^^xsd:date ;
+  schema:gender &lt;https://schema.org/Male&gt; ;
+  espad:numeroIdentificacionAyuntamiento "78a51b5ea246da7cf7e8c60e82a501d5e4008f1c" ;
+  espad:municipioNacimiento &lt;https://datos.ign.es/recurso/btn100/municipio/15030&gt; ;
+  espad:provinciaNacimiento &lt;https://datos.ign.es/recurso/btn100/provincia/a-coruna&gt; ;
+  espad:address &lt;http://vocab.linkeddata.es/recurso/direccion-postal/100034&gt; ;
+  espad:municipioResidencia &lt;https://datos.ign.es/recurso/btn100/municipio/28079&gt; ;
+  espad:provinciaResidencia &lt;https://datos.ign.es/recurso/btn100/provincia/madrid&gt; ;
+  espad:distritoResidencia &lt;http://vocab.ciudadesabiertas.es/recurso/territorio/distrito/79602&gt; ;  
+  espad:nivelEstudios &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-nivel-estudio/00&gt; ;
+  espad:tipoDocumentoIdentidad &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad/1&gt; ; 
+  espad:tipoLocalResidencia &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-local-residencia/1&gt; .
+</pre>
+<span class="markdown">
+Next, we will present the change of domicile within the Town Hall of the inhabitant described in the previous example. This variation is reflected with the concept of types of variation corresponding to the MCD code. As you can see, the same data that was explained in the previous example is described. However, in this variation the property [espad:modificaHabitante](#modificaHabitante) is used in order to link this new instance of a variation with the previous version of the inhabitant. Additionally, the previous instance of this inhabitant marked with active status must change to false since it does not reflect the current data of the inhabitant in the census, but it is important to keep this record for a historical one.
+
+</span>
+<pre class="example highlight preprint">
+  &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/variacion-habitante/6150b6e24263c14e0e361695617bc4e192d15cb6&gt; a espad:VariacionHabitante ;
+  espad:registraHabitante &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/habitante/3799da3782f3088a5bfdf43d18c9274df7baa45c&gt; ;
+  espad:modificaHabitante &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/habitante/a209fd32c09cf5d06e4e6aedf8b81924b4e981f3&gt; ;
+  espad:fechaVariacion "20171015"^^xsd:date ;
+  espad:tipoVariacion &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-variacion/MCD&gt; ;
+  espad:numeroHojaPadronal "145" .
+</pre>
+<span class="markdown">
+The change of address within the municipality reflects a new address of residence represented by another instance of Postal Address. However, due this change is performed after several years, the first time was when the birth of the inhabitant was register, the educational level has changed. At the time of registering the change of residence address, the inhabitant have already obtained a university degree, specifically "Architect or Engineer" according to the SKOS classification.
+
+</span>
+<pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/habitante/3799da3782f3088a5bfdf43d18c9274df7baa45c&gt; a espad:Habitante ;
+  espad:tipoDocumentoIdentidad &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad/1&gt; ;
+  espad:activo "true"^^xsd:boolean ;
+  schema:birthDate "19840520"^^xsd:date ;
+  schema:gender &lt;https://schema.org/Male&gt; ;
+  espad:numeroIdentificacionAyuntamiento "78a51b5ea246da7cf7e8c60e82a501d5e4008f1c" ;
+  espad:address &lt;http://vocab.ciudadesabiertas.es/recurso/direccion-postal/110025&gt; ;
+  espad:municipioResidencia &lt;https://datos.ign.es/recurso/btn100/municipio/28079&gt; ;
+  espad:provinciaResidencia &lt;https://datos.ign.es/recurso/btn100/provincia/madrid&gt; ;
+  espad:distritoResidencia &lt;http://vocab.ciudadesabiertas.es/recurso/territorio/distrito/79602&gt; ;
+  espad:municipioNacimiento &lt;https://datos.ign.es/recurso/btn100/municipio/15030&gt; ;
+  espad:provinciaNacimiento &lt;https://datos.ign.es/recurso/btn100/provincia/a-coruna&gt; ;
+  espad:nivelEstudios &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-nivel-estudio/45&gt; ;
+  espad:tipoDocumentoIdentidad &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad/1&gt; ; 
+  espad:tipoLocalResidencia &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-local-residencia/1&gt; .
+</pre>
+<span class="markdown">
+Next, we will observe the example of a foreigner who registers his residence in the city of Madrid. The type of variation will be Register by Omission (AOM). The data of the variation record is registered in the same way as in the previous examples.
+</span>
+<pre class="example highlight preprint">
+  &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/variacion-habitante/f0197c41b5c1ab8bed8d79db08fce67fcd6523da&gt; a espad:VariacionHabitante ;
+  espad:registraHabitante &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/habitante/157b16b4ecb24d8f1d85c67ee022c279a03ae132&gt; ;
+  espad:fechaVariacion "20170518"^^xsd:date ;
+  espad:tipoVariacion &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-variacion/AOM&gt; ;
+  espad:numeroHojaPadronal "124" .
+</pre>
+<span class="markdown">
+In general, the foreigner data are described in the same way as for an inhabitant born in Spain. However, neither the municipality nor the province are described, but the country of birth is represented by the property [espad:paisNacimiento](espad:#paisNacimiento). Then, the nationality is specified by the property [schema:nationality](http://schema.org/nationality), which links the foreigner inhabitant to to the country. Then, the identity document used for the registration is registered, in this case is a Passport represented by code 2 of the respective list of concepts.
+
+Another detail that can be reflected in a record of variation of an inhabitant is the municipality, province or country either of origin or destination. It will depend of the type of variation that is being recorded. In one hand, in the case of a Register by Change of Residence (ACR) the properties [espad: provinciaProcedencia](#provinciaProcedencia), [espad:municipioProcedencia] (#municipioProcedencia), or [espad:paisProcedencia](#paisProcedencia) are used in order to represent the place where the inhabitant moved. On the other hand, in the case of a Unregister by Change for Residence, it can be represented by the properties [espad:provinciaDestino](#provinciaDestino), [espad:municipioDestino](#municipioDestino), or [espad:paisDestino](#paisDestino) and so you can register to where the inhabitant went. In the specific case of the code of our example it is observed that the municipality and province of origin of this foreigner is the municipality and the province of Pontevedra.
+
+
+Otro detalle que se puede reflejar en un registro de variación de un habitante es el municipio, provincia o el país ya sea de procedencia o de destino del habitante según sea el tipo de variación que se está registrando. Esta particularidad se puede registrar por ejemplo para el caso de un Alta por Cambio de Residencia (ACR) mediante las propiedades [espad:provinciaProcedencia](#provinciaProcedencia), [espad:municipioProcedencia](#municipioProcedencia), o [espad:paisProcedencia](#paisProcedencia) de tal forma que se pueda concocer al lugar que se mudó el habitante. Por otra parte, para el caso de una variación debida a una Baja por Cambio de Residencia se puede representar mediante las propiedades [espad:provinciaDestino](#provinciaDestino), [espad:municipioDestino](#municipioDestino), o [espad:paisDestino](#paisDestino) y así se puede registrar a qué lugar se fue el habitante. En el caso específico del código de nuestro ejemplo se observa que el municipio y provincia de procedencia de este extranjero es el municipio y la provincia de Pontevedra.
+</span>
+<pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/padron-municipal/habitante/157b16b4ecb24d8f1d85c67ee022c279a03ae132&gt; a espad:Habitante ;
+  espad:activo "true"^^xsd:boolean ;
+  espad:nivelEstudios &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-nivel-estudio/48&gt; ;
+  schema:birthDate "19800420"^^xsd:date ;
+  schema:gender &lt;https://schema.org/Female&gt; ;
+  espad:numeroIdentificacionAyuntamiento "ade98cee8db3d03648b7a64e36704fa553ea9666" ;
+  espad:paisNacimiento &lt;https://vocab.ciudadesabiertas.es/recurso/pais/111&gt; ;
+  schema:nationality &lt;https://vocab.ciudadesabiertas.es/recurso/pais/111&gt; ;
+  espad:address &lt;http://vocab.ciudadesabiertas.es/recurso/direccion-postal/13007&gt; ;
+  espad:municipioResidencia &lt;https://datos.ign.es/recurso/btn100/municipio/28079&gt; ;
+  espad:provinciaResidencia &lt;https://datos.ign.es/recurso/btn100/provincia/madrid&gt; ;
+  espad:distritoResidencia &lt;http://vocab.ciudadesabiertas.es/recurso/territorio/distrito/79602&gt; ;
+  espad:tipoDocumentoIdentidad &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad/2&gt; ;
+  espad:tipoLocalResidencia &lt;http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-local-residencia/1&gt; .
+  espad:municipioProcedencia &lt;https://datos.ign.es/recurso/btn100/municipio/36038&gt; ;
+  espad:provinciaProcedencia &lt;https://datos.ign.es/recurso/btn100/provincia/pontevedra&gt;
+</pre>
+</span>
 </html>

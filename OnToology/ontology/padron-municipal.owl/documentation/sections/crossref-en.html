@@ -24,11 +24,11 @@ This section provides details for each class and property defined by Vocabulary 
             title="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito">District</a>
       </li>
       <li>
-         <a href="#Habitante"
-            title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+         <a href="#http://schema.org/Embassy" title="http://schema.org/Embassy">Embassy</a>
       </li>
       <li>
-         <a href="#http://schema.org/Embassy" title="http://schema.org/Embassy">Embassy</a>
+         <a href="#Habitante"
+            title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
       </li>
       <li>
          <a href="#VariacionHabitante"
@@ -169,15 +169,39 @@ This section provides details for each class and property defined by Vocabulary 
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://schema.org/Embassy">
+      <h3>Embassy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Embassy</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org">http://schema.org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#consuladoDestino"
+               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#consuladoDestino">Embassy of destination</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#consuladoProcedencia"
+               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#consuladoProcedencia">Embassy of origin</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Habitante">
-      <h3>Each person who constitute part of the population of a neighborhood, city, province, or a nation.<sup class="type-c" title="class">c</sup>
+      <h3>Inhabitant<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante</p>
       <div class="comment">
-         <span class="markdown">Cada persona que constituye parte de la población de un barrio, ciudad, provincia o nación.</span>
+         <span class="markdown">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -527,30 +551,6 @@ This section provides details for each class and property defined by Vocabulary 
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://schema.org/Embassy">
-      <h3>Embassy<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://schema.org/Embassy</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://schema.org">http://schema.org</a>
-         </dd>
-      </dl>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#consuladoDestino"
-               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#consuladoDestino">Embassy of destination</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#consuladoProcedencia"
-               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#consuladoProcedencia">Embassy of origin</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="VariacionHabitante">
       <h3>Inhabitant variation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -583,7 +583,7 @@ This section provides details for each class and property defined by Vocabulary 
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Habitante"
-               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -592,7 +592,7 @@ This section provides details for each class and property defined by Vocabulary 
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Habitante"
-               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -600,7 +600,7 @@ This section provides details for each class and property defined by Vocabulary 
                title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#registraHabitante">Register inhabitant</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">exactly</span> 1 <a href="#Habitante"
-               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -608,7 +608,7 @@ This section provides details for each class and property defined by Vocabulary 
                title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#modificaHabitante">Modify inhabitant</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">max</span> 1 <a href="#Habitante"
-               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+               title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -886,7 +886,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -919,7 +919,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -952,7 +952,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -990,7 +990,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1023,7 +1023,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1056,7 +1056,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1089,7 +1089,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1122,7 +1122,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1155,7 +1155,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1191,7 +1191,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1223,7 +1223,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1272,7 +1272,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has range</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1304,7 +1304,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1337,7 +1337,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1370,7 +1370,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1403,7 +1403,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1450,7 +1450,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1488,7 +1488,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1521,7 +1521,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1554,7 +1554,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1587,7 +1587,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1626,7 +1626,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has range</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1653,7 +1653,7 @@ This section provides details for each class and property defined by Vocabulary 
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1687,7 +1687,7 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1723,7 +1723,7 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1822,7 +1822,7 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1887,7 +1887,7 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1954,7 +1954,7 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
             <dt>has domain</dt>
             <dd>
                <a href="#Habitante"
-                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</a>
+                  title="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante">Inhabitant</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

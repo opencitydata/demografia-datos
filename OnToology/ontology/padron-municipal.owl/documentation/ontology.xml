@@ -976,8 +976,8 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Cada persona que constituye parte de la población de un barrio, ciudad, provincia o nación.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal"/>
-        <rdfs:label xml:lang="en">Each person who constitute part of the population of a neighborhood, city, province, or a nation.</rdfs:label>
         <rdfs:label xml:lang="es">Habitante</rdfs:label>
         <rdfs:label xml:lang="en">Inhabitant</rdfs:label>
     </owl:Class>

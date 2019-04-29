@@ -679,14 +679,14 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Cada persona que constituye parte de la población de un barrio, ciudad, provincia o nación."
+  }, {
+    "@language" : "en",
+    "@value" : "Each person who constitute part of the population of a neighborhood, city, province, or a nation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Each person who constitute part of the population of a neighborhood, city, province, or a nation."
-  }, {
     "@language" : "es",
     "@value" : "Habitante"
   }, {

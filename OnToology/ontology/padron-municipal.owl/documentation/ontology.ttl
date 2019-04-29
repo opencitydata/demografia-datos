@@ -447,6 +447,8 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
 :activo rdf:type owl:DatatypeProperty ;
         rdfs:domain :Habitante ;
         rdfs:range xsd:boolean ;
+        rdfs:comment "El estado de un habitante."@es ,
+                     "The state of the inhabitant state."@en ;
         rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
         rdfs:label "active"@en ,
                    "activo"@es .

@@ -429,6 +429,8 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/2000/01/rdf-schema#comment> "El estado de un habitante."@es .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/2000/01/rdf-schema#comment> "The state of the inhabitant state."@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/2000/01/rdf-schema#label> "active"@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#activo> <http://www.w3.org/2000/01/rdf-schema#label> "activo"@es .

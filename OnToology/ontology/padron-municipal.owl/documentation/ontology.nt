@@ -641,8 +641,8 @@ _:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://vocab.ciudadesabier
 _:genid49 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> <http://www.w3.org/2000/01/rdf-schema#comment> "Cada persona que constituye parte de la población de un barrio, ciudad, provincia o nación."@es .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> <http://www.w3.org/2000/01/rdf-schema#comment> "Each person who constitute part of the population of a neighborhood, city, province, or a nation."@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> <http://www.w3.org/2000/01/rdf-schema#label> "Each person who constitute part of the population of a neighborhood, city, province, or a nation."@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> <http://www.w3.org/2000/01/rdf-schema#label> "Habitante"@es .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> <http://www.w3.org/2000/01/rdf-schema#label> "Inhabitant"@en .
 # 

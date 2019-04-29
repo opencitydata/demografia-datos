@@ -660,10 +660,10 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
                            ] ;
-           rdfs:comment "Cada persona que constituye parte de la población de un barrio, ciudad, provincia o nación."@es ;
+           rdfs:comment "Cada persona que constituye parte de la población de un barrio, ciudad, provincia o nación."@es ,
+                        "Each person who constitute part of the population of a neighborhood, city, province, or a nation."@en ;
            rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
-           rdfs:label "Each person who constitute part of the population of a neighborhood, city, province, or a nation."@en ,
-                      "Habitante"@es ,
+           rdfs:label "Habitante"@es ,
                       "Inhabitant"@en .
 
 

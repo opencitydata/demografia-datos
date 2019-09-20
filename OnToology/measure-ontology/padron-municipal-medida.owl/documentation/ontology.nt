@@ -1,7 +1,7 @@
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://purl.org/dc/elements/1.1/contributor> "Honorio Enrique Crespo Díaz-Alejo - Ayuntamiento de Madrid" .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://purl.org/dc/elements/1.1/contributor> "María Carmen Ruiz Moreno - Ayuntamiento de Madrid" .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://purl.org/dc/elements/1.1/contributor> "María Jesús Fernández Ruiz  - Ayuntamiento de Zaragoza" .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://purl.org/dc/elements/1.1/contributor> "María Jesús Fernández Ruiz - Ayuntamiento de Zaragoza" .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://purl.org/dc/elements/1.1/contributor> "María Jesús Gallego San Miguel - Ayuntamiento de Madrid" .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://purl.org/dc/elements/1.1/contributor> "María del Mar Arribas de Andrés - Ayuntamiento de Madrid" .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> <http://purl.org/dc/elements/1.1/contributor> "Red.es" .

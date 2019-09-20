@@ -9,7 +9,7 @@
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> rdf:type owl:Ontology ;
                                                                            <http://purl.org/dc/elements/1.1/contributor> "Honorio Enrique Crespo Díaz-Alejo - Ayuntamiento de Madrid" ,
                                                                                                                          "María Carmen Ruiz Moreno - Ayuntamiento de Madrid" ,
-                                                                                                                         "María Jesús Fernández Ruiz  - Ayuntamiento de Zaragoza" ,
+                                                                                                                         "María Jesús Fernández Ruiz - Ayuntamiento de Zaragoza" ,
                                                                                                                          "María Jesús Gallego San Miguel - Ayuntamiento de Madrid" ,
                                                                                                                          "María del Mar Arribas de Andrés - Ayuntamiento de Madrid" ,
                                                                                                                          "Red.es" ,

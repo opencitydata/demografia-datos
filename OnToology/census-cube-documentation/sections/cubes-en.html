@@ -1,0 +1,46 @@
+<html>
+<h2 id="ref" class="list">Cubos de Datos de Padrón Municipal <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Al contar con todos los vocabularios necesarios para la representación de los requisitos se pueden definir los cubos que se tendrán para los datos del Padrón Municipal. Es importante mencionar que los requisitos que se representan son aquellos que comprenden la explotación estadística de los datos del padrón municipal. Estos requisitos corresponden a aquellos definidos como Preguntas de Competencia marcados como aceptados (A) y que están comprendidos entre el Req-41 y el Req-73 del entregable de Especificación de Requisitos</span>
+
+<div id="cubosdeedad">
+<h3 id="qb1" class="list">Cubo de población según edad</h3>
+<span class="markdown">
+  En este cubo se representan aquellos datos relacionados con la edad de los habitantes. Concretamente, se han definido como dimensiones el sexo, el periodo de referencia, el área de referencia, y los grupos de edad por rangos quinquenales. Como medida general se ha definido el numero-personas ya que permite encapsular los datos referidos a la población total según rangos de edad, población total según rangos de edad y sexo, población total según rangos de edad, sexo y área, y población total según sexo. En la Figura 3 se presenta el diagrama correspondiente.
+</span>
+</div>
+
+<center>
+  <img src="resources/images/CuboDatosEdad.png"><figcaption>Figura 3.- Cubo de datos de población según edad.</figcaption>
+</center>
+<div id="cubosdenacionalidad">
+  <h3 id="qb2" class="list">Cubo de población según nacionalidad</h3>
+<span class="markdown">
+  En este cubo se representan aquellos datos relacionados con la nacionalidad de los habitantes. Concretamente, se han definido como dimensiones el sexo, el periodo de referencia, el área de referencia, los grupos de edad por rangos quinquenales, y la nacionalidad. Como medidas generales se han definido el numero-extranjeros y numero-espanoles ya que permiten encapsular los datos referidos al total de la población. Por un lado, el número de extranjeros se emplea para representar la población total de extranjeros, población total extranjeros según sexo, población total según país de nacionalidad, y porcentaje de población nacida en el extranjero según sexo y rango de edad. Finalmente, el número de españoles se emplea para representar la población total de españoles.
+</span>
+  <center><img src="resources/images/CuboDatosNacionalidad.png"><figcaption>Figura 4.- Cubo de datos de población según nacionalidad.</figcaption></center>
+</div>
+<div id="cubosdeestudios">
+  <h3 id="qb3" class="list">Cubo de población según nivel de estudios</h3>
+<span class="markdown">
+  En este cubo se representan aquellos datos relacionados con el nivel de estudios de los habitantes. Concretamente, se han definido como dimensiones el periodo de referencia, y el nivel de estudios. Como medida general se ha incluido numero-personas para encapsular los valores asociados con la población total de 25 años o más con estudios medios o educación secundaria, población total de 25 años o más con estudios superiores, población total de 25 años o más con estudios muy avanzados. Particularmente se ha definido la medida porcentaje-de-poblacion-analfabeta para representar al porcentaje de población analfabeta entre 16 y 64 años.
+</span>
+  <center><img src="resources/images/CuboDatosEstudios.png"><figcaption>Figura 5.- Cubo de datos de población según nivel de estudios.</figcaption></center>
+</div>
+<div id="cubosdeprocedencia">
+  <h3 id="qb4" class="list">Cubo de población según lugar de procedencia</h3>
+  <span class="markdown">
+  En este cubo se representan aquellos datos relacionados con el lugar de procedencia de los habitantes. Concretamente, se han definido como dimensiones el periodo de referencia, área, nivel de estudios, grupos de edad por rangos quinquenales, municipio de residencia y provincia de residencia. Es importante mencionar que, se han reutilizado las propiedades municipio y provincia de residencia del vocabulario desarrollado para representar el raw data de los ficheros de intercambio del padrón municipal. Finalmente, como medidas se han definido la provincia de residencia y el municipio de residencia con la finalidad de encapsular de forma general los valores correspondientes con provincia de procedencia de los habitantes del área X (provincia de procedencia), municipio de procedencia de los habitantes del área X (municipio de procedencia), provincia de procedencia y nivel de estudios según rangos de edad de los habitantes del área X (provincia de procedencia), municipio de procedencia y nivel de estudios según rangos de edad de los habitantes del área X (municipio de residencia).
+</span>
+  <center><img src="resources/images/CuboDatosProcedencia.png"><figcaption>Figura 6.- Cubo de datos de población según lugar de procedencia.</figcaption></center>
+
+</div>
+<div id="cubosdeindicadores">
+  <h3 id="qb5" class="list">Cubo de indicadores de estructura demográfica</h3>
+  <span class="markdown">
+  En este cubo se representan aquellos datos relacionados índices que se calculan a partir de los datos de los habitantes del padrón municipal. Como dimensiones se han definido el periodo de referencia y el área en la que se calculan los valores de dichos índices. Las medidas asociadas a este cubo se han definido particularmente para cada índice, así tenemos índice de dependencia, índice de feminidad, índice de infancia, índice de juventud, índice de maternidad, índice de población activa, índice de reemplazo, índice de sobreenvejecimento, índice de tendencia, tasa de mortalidad, tasa de natalidad, edad media de la población, porcentaje de población nacida en el extranjero (porcentaje-de-poblacion-extranjera), porcentaje de población joven, porcentaje de población adulta, porcentaje de población envejecida, porcentaje de población extranjera infantil. Finalmente, y siguiendo la generalización descrita en los otros cubos, se ha definido también la medida numero-personas para encapsular los valores de la población total, número de crecimiento de la población, y la población total en un rango de años.
+</span>
+  <center><img src="resources/images/CuboDatosIndicadores.png"><figcaption>Figura 7.- Cubo de datos de indicadores de estructura demográfica.</figcaption></center>
+</div>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+<h2 id="desc" class="list">Vocabularios para la representación de los Cubos de datos del Padrón Municipal<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Para la generación de los cubos de datos del Padrón Municipal se reutiliza el vocabulario <a href="https://www.w3.org/TR/vocab-data-cube">W3C Data Cube</a>. Este vocabulario es una recomendación para la publicación de datos multidimensionales que facilita su enlazado con otros datos y conceptos relacionados. Asimismo, este vocabulario es compatible con el estándar SDMX (Statistical Data and Metadata eXchange), que permite compartir e intercambiar datos y metadatos estadísticos entre organizaciones. SDMX es un <a href="https://sdmx.org">ISO International Standard IS-17369</a>,  que se sustenta en conceptos de dimensiones, atributos y medidas descritos como una estructura de datos.</span>
+
+<center><img src="https://www.w3.org/TR/vocab-data-cube/images/qb-fig1.png"><figcaption>Figura 1.- Diagrama del vocabulario W3C Data Cube.</figcaption></center>
+
+<span class="markdown">Como se puede observar en la Figura 1, W3C Data Cube contiene varios conceptos y propiedades que permiten describir datos para diferentes niveles de agregación. Sin embargo, con la finalidad de facilitar la explicación de aquellos conceptos y propiedades que se utilizan para representar los cubos de datos del padrón municipal se empleará el extracto de la Figura 2.</span>
+
+<center><img src="resources/images/CuboDatosExtracto.png"><figcaption>Figura 2.- Extracto del vocabulario W3C Data Cube.</figcaption></center>
+
+<span class="markdown">
+Concretamente, los cubos de datos están conformados por varias dimensiones y medidas que permiten definir diferentes observaciones. En la Figura 2, el vocabulario, representado por el prefijo qb , se organiza alrededor del concepto de [qb:DataSet](https://www.w3.org/TR/vocab-data-cube/#reference-datasets), que se define como una recopilación de datos que corresponde a una estructura definida por [qb:DataStructureDefinition](https://www.w3.org/TR/vocab-data-cube/#dsd) y que se materializa mediante un conjunto de observaciones representadas por [qb:Observation](https://www.w3.org/TR/vocab-data-cube/#reference-datasets). Las dimensiones y medidas que se pueden definir en la estructura de cada dataset se representan mediante:
+</span>
+<ul>
+ <li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qb:DimensionProperty</a>: un componente que identifica las dimensiones de las observaciones ya sea con respecto al sexo, edad, tiempo, región geográfica, niveles de estudio, etc. Las dimensiones normalmente representan conceptos, que se toman de una lista de códigos también conocidas como clasificaciones, que se identifican normalmente mediante el uso del vocabulario SKOS.</li>
+ <li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qp:MeasurementProperty</a>: un componente que representa el valor medido de los datos observados, como por ejemplo, la densidad de población, índice de juventud, porcentaje de población adulta, número de extranjeros, etc.</li>
+</ul>
+
+<span>
+Para la definición de estas dimensiones y medidas también se reutilizan varios vocabularios de referencia que son utilizados en otros proyectos a nivel nacional e internacional:
+
+<ol>
+ <li>Vocabularios de SDMX (Statistical Data and Metadata eXchange):</li>
+ <ul>
+   <li><a href="http://purl.org/linked-data/sdmx/2009/dimension">sdmx-dimension</a>: Para la definición de dimensiones tales como área de referencia, período de referencia, sexo, y nivel de estudio.</li>
+   <li><a href="http://purl.org/linked-data/sdmx/2009/code">sdmx-code</a>: Para la definición de listas de conceptos para representar el sexo de los habitantes.</li>
+ </ul>
+ <li>Vocabularios IAEST:</li>
+    <ul>
+      <li><a href="https://opendata.aragon.es/def/iaest/dimension">iaest-dimension</a>: Para la definición de dimensiones tales como <a href="https://opendata.aragon.es/def/iaest/dimension#edad-grupos-quinquenales">edad por grupos quinquenales</a> y <a href="http://opendata.aragon.es/def/iaest/dimension#nacionalidad">nacionalidad</a>.</li>
+      <li>SKOS IAEST: Para la definición de listas de conceptos de <a href="https://opendata.aragon.es/kos/iaest/edad-grupos-quinquenales">rangos de edad de los grupos quinquenales</a> y los <a href="https://opendata.aragon.es/kos/iaest/nacionalidad-pais-nombre">nombres de los países de nacionalidad</a>.</li>
+    </ul>
+ <li>Otras listas SKOS:</li>
+ <ul>
+   <li>Para la representación de los años de la dimensión del período de referencia se reutilizará la lista de códigos <a href="http://reference.data.gov.uk/id/year">intervalos de tiempo</a> del gobierno británico.</li>
+   <li>Para los niveles de estudio se reutilizará la lista de códigos de <a href="http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-nivel-estudio">tipos de estudio</a> definida para el vocabulario de padrón municipal
+ </li>
+ </ul>
+</ol>
+</span>
+<span class="markdown">
+Si bien se reutilizan los vocabularios anteriormente descritos, ha sido necesario el desarrollo de un vocabulario que permita la representación de las medidas relacionadas con los datos y los requisitos del vocabulario de padrón municipal. Este vocabulario, cuyo prefijo se denota por el prefijo espad-medida y se encuentra disponible en la URI [http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida](http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida).
+</span>
+
+</html>

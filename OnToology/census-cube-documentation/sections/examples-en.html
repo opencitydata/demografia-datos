@@ -1,0 +1,76 @@
+<html>
+<h2 id="exa" class="list">Ejemplos de los Cubos de Datos de Padrón Municipal <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Al contar con todos los vocabularios necesarios para la representación de los requisitos se pueden definir los cubos que se tendrán para los datos del Padrón Municipal. Es importante mencionar que los requisitos que se representan son aquellos que comprenden la explotación estadística de los datos del padrón municipal. Estos requisitos corresponden a aquellos definidos como Preguntas de Competencia marcados como aceptados (A) y que están comprendidos entre el Req-41 y el Req-73 del entregable de Especificación de Requisitos</span>
+
+<div id="example1">
+  <h3 id="exz1" class="list">Ejemplo 1: Población según área, sexo y rango de edad.</h3>
+<span class="markdown">
+  En este ejemplo se representan aquellos datos relacionados con la población total de los habitantes de la ciudad de Madrid según la edad y el sexo de los habitantes. Concretamente, se han definido como dimensiones el sexo, el periodo de referencia, el área de referencia, y los grupos de edad por rangos quinquenales. Como medida general se ha definido el numero-personas ya que permite encapsular los datos referidos a la población total según rangos de edad y sexo. En la Figura 8 se presenta el diagrama correspondiente a la representación de estos datos de acuerdo al cubo de datos de población según edad.
+
+</span>
+
+  <center><img src="resources/images/EjemploCuboDatosPoblacion-RangoEdades-Sexo-AreaResidencia.png"><figcaption>Figura 8.- Ejemplo de población total según rango de edad, sexo y área de residencia.</figcaption></center>
+
+<span class="markdown">
+  A continuación, teniendo en cuenta este diagrama, se enumerarán los pasos necesarios para crear las instancias correspondientes con los datos asociados a este ejemplo.
+
+  1) Definición del conjunto o cubo de datos: Aquí se creará una instancia de [qb:Dataset](http://purl.org/linked-data/cube#DataSet) que representará el conjunto de datos del ejemplo. Luego, enlazamos este conjunto, mediante la propiedad [qb:structure](http://purl.org/linked-data/cube#structure) con la instancia de la estructura de datos que definiremos en el paso 2.
+</span>
+  <pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DS_PoblacionPorEdad&gt; a qb:DataSet ;
+qb:structure &lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DSD_PoblacionPoblacionPorEdad&gt; .
+  </pre>
+<span class="markdown">
+2) Definición de la estructura de datos: En este paso se especificarán las dimensiones y medidas que encapsulará el cubo. Para esto se crea una instancia de [qb:DataStructureDefinition](http://purl.org/linked-data/cube#DataStructureDefinition) con sus metadatos asociados.
+</span>
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DSD_PoblacionPorEdad&gt; a qb:DataStructureDefinition ;
+rdfs:label "Estructura de los cubos de datos que se corresponden con el conjunto de datos de padrón municipal de la ciudad de
+Madrid, en este archivo se detalla el número de habitantes según su sexo, rango de edad y el área donde reside"@es ;
+skos:notation "DSD_PoblacionPorEdad" .
+  </pre>
+<span class="markdown">
+Posteriormente, se definen las dimensiones que tendrá la estructura de datos del cubo. Para lo cual se crean instancias de [qb:component](http://purl.org/linked-data/cube#component) que se enlazarán con la dimension correspondiente mediante la propiedad [qb:dimension](http://purl.org/linked-data/cube#dimension). En el caso del ejemplo, se especifican como dimensiones: sexo, área de referencia, periodo de referencia, y la edad por grupos quinquenales.
+</span>
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DSD_PoblacionPorEdad&gt; qb:component _:node1egmfx1 .
+_:node1egmfx1 qb:dimension sdmx-dimension:sex .
+
+&lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DSD_PoblacionPorEdad&gt; qb:component _:node1egmfx2 .
+_:node1egmfx2 qb:dimension sdmx-dimension:refArea .
+
+&lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DSD_PoblacionPorEdad&gt; qb:component _:node1egmfx3 .
+_:node1egmfx3 qb:dimension sdmx-dimension:refPeriod .
+
+&lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DSD_PoblacionPorEdad&gt; qb:component _:node1egmfx4 .
+_:node1egmfx4 qb:dimension iaest-dimension:edad-grupos-quinquenales.
+</pre>
+<span class="markdown">
+De igual forma, se definen las medidas de la estructura de datos. Para ello, se crea nuevamente una instancia de [qb:component] que se enlazará con la medida correspondiente mediante la propiedad [qb:measure](http://purl.org/linked-data/cube#measure). En el caso del ejemplo, la medida que se especifica es el número de personas.
+</span>
+<pre>
+  &lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/DSD_PoblacionPorEdad&gt; qb:component _:node1egmfx5 .
+_:node1egmfx5 qb:measure espad-measure:numero-personas.
+</pre>
+<span class="markdown">
+3) Definición de una observación del Dataset: El paso final consiste en la representación de las observaciones. Para ello, se crea un instancia de [qb:Observation](http://purl.org/linked-data/cube#Observation) para cada dato que se quiera representar. Así también, se tiene que enlazar la observación con el cubo, o conjunto de datos, al que pertenece. Para ello se emplea la propiedad [qb:dataSet](http://purl.org/linked-data/cube#dataSet) enlazada a la instancia definida en el paso 1.
+Adicionalmente, se tendán que instanciar las dimensiones y medidas que se describen en la observación. Para ello se emplean las propiedades definidas en la estructura de datos, descritas en el paso 2. Cada una de estas dimensiones y medidas estarán enlazadas con los valores correspondientes. Estos valores corresponden a las instancias de las listas de códigos o conceptos necesarios.
+</span>
+<pre>
+&lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-muinicipal/a209fd32c10cf5d06e4e6aedf8b81950b4e981f3&gt; a qb:Observation ;
+qb:dataSet &lt;http://vocab.ciudadesabiertas.es/recurso/demografia/padron-muinicipal/DS_PoblacionPorEdad&gt; ;
+sdmx-dimension:refArea &lt;http://vocab.ciudadesabiertas.es/recurso/territorio/distrito/Centro&gt; ;
+sdmx-dimension:refPeriod &lt;http://reference.data.gov.uk/id/year/2019&gt; ;
+espad-medida:numero-personas ”2731"^^xsd:int ;
+sdmx-dimension:sexo &lt;http://purl.org/linked-data/sdmx/2009/code#sex-M&gt; ;
+iaest-dimension:edad-grupos-quinquenales &lt;https://opendata.aragon.es/kos/iaest/edad-grupos-quinquenales/20-a-24&gt; .
+</pre>
+
+  <div id="example2">
+    <h3 id="exz2" class="list">Ejemplo 2: Índice de juventud</h3>
+<span class="markdown">
+En este ejemplo se representan aquellos datos relacionados con el índice de juventud que se registra en la población de Madrid. Las instancias se crean de la misma manera que para el Ejemplo 1.  En la Figura 9 se presenta el diagrama correspondiente para la representación del índice de juventud en los años 2018 y 2019 en el distrito Centro. Estos datos son representados por dos observaciones en las que se especifican los valores concretos de las dimensiones y la medida para este caso.
+</span>
+    <center><img src="resources/images/EjemploCuboDatosIndice_De_Juventud.png"><figcaption>Figura 9.- Ejemplo de población total según rango de edad, sexo y área de residencia.</figcaption></center>
+</html>

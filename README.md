@@ -13,4 +13,4 @@ El material generado en las diferentes actividades ejecutadas durante el desarro
 Para gestionar aquellas incidencias o mejoras sugeridas con respecto al vocabulario te recomendamos seguir las guías proporcionadas en [Gestión de Issues](https://github.com/CiudadesAbiertas/vocab-demografia-padron-municipal/wiki/Gesti%C3%B3n-de-issues)
 
 ## Ejemplos
-Algunas [consultas](https://github.com/CiudadesAbiertas/vocab-demografia-padron-municipal/blob/master/examples/queries.md) a realizar en un SPARQL endpoint de pruebas se han habilitado para ejemplificar su funcionamiento. Los ejemplos cargados en el endpoint han sido generados con datos ficticios con la finalidad de representarlos según el vocabulario de macrodatos del padrón municipal.
+Algunas [consultas](https://github.com/opencitydata/demografia-padron-municipal/tree/master/examples) a realizar en un SPARQL endpoint de pruebas se han habilitado para ejemplificar su funcionamiento. Los ejemplos cargados en el endpoint han sido generados con datos ficticios con la finalidad de representarlos según el vocabulario de macrodatos del padrón municipal.

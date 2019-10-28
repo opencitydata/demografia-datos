@@ -113,17 +113,6 @@
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-tendencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-tendencia> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
 # 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-# 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
-# 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
-# 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
@@ -151,9 +140,6 @@
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
-# 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -224,18 +210,6 @@
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-tendencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-tendencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
 # 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
-# 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
-# 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
-# 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
@@ -263,10 +237,6 @@
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
-# 
-# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -345,24 +315,6 @@
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-tendencia> <http://www.w3.org/2000/01/rdf-schema#label> "Trend index"@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-tendencia> <http://www.w3.org/2000/01/rdf-schema#label> "Índice de tendencia"@es .
 # 
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Municipality of origin name."@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Nombre del municipio de procedencia"@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality of origin"@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio de procedencia"@es .
-# 
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of Spanish people."@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de españoles"@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/2000/01/rdf-schema#label> "Numero de españoles"@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles> <http://www.w3.org/2000/01/rdf-schema#label> "number of Spanish"@en .
-# 
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of foreign people."@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de extranjeros"@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/2000/01/rdf-schema#label> "Number of foreign"@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros> <http://www.w3.org/2000/01/rdf-schema#label> "Número de extranjeros"@es .
-# 
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of people."@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de personas"@es .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> .
@@ -404,12 +356,6 @@
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven> <http://www.w3.org/2000/01/rdf-schema#label> "Percentaje of young population"@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven> <http://www.w3.org/2000/01/rdf-schema#label> "Porcentaje de población joven"@es .
-# 
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Nombre de la provincia de procedencia"@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Province of origin name"@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Province of origin"@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia de procedencia"@es .
 # 
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Deaths per 1.000 inhabitants."@en .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Defunciones por cada 1.000 habitantes."@es .

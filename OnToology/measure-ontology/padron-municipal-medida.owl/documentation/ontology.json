@@ -331,72 +331,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#MeasureProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Municipality of origin name."
-  }, {
-    "@language" : "es",
-    "@value" : "Nombre del municipio de procedencia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Municipality of origin"
-  }, {
-    "@language" : "es",
-    "@value" : "Municipio de procedencia"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#MeasureProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Number of Spanish people."
-  }, {
-    "@language" : "es",
-    "@value" : "Número de españoles"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Numero de españoles"
-  }, {
-    "@language" : "en",
-    "@value" : "number of Spanish"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#MeasureProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Number of foreign people."
-  }, {
-    "@language" : "es",
-    "@value" : "Número de extranjeros"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Number of foreign"
-  }, {
-    "@language" : "es",
-    "@value" : "Número de extranjeros"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ]
-}, {
   "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#MeasureProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -556,26 +490,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ]
-}, {
-  "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#MeasureProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Nombre de la provincia de procedencia"
-  }, {
-    "@language" : "en",
-    "@value" : "Province of origin name"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Province of origin"
-  }, {
-    "@language" : "es",
-    "@value" : "Provincia de procedencia"
   } ]
 }, {
   "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad",

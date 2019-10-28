@@ -133,20 +133,6 @@
                      rdfs:range xsd:double .
 
 
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia
-:municipio-procedencia rdf:type owl:DatatypeProperty .
-
-
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles
-:numero-espanoles rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:double .
-
-
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros
-:numero-extranjeros rdf:type owl:DatatypeProperty ;
-                    rdfs:range xsd:double .
-
-
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas
 :numero-personas rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:double .
@@ -180,10 +166,6 @@
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven
 :porcentaje-de-poblacion-joven rdf:type owl:DatatypeProperty ;
                                rdfs:range xsd:double .
-
-
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia
-:provincia-procedencia rdf:type owl:DatatypeProperty .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad
@@ -258,21 +240,6 @@
                               <http://purl.org/linked-data/cube#MeasureProperty> .
 
 
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia
-:municipio-procedencia rdf:type owl:NamedIndividual ,
-                                <http://purl.org/linked-data/cube#MeasureProperty> .
-
-
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles
-:numero-espanoles rdf:type owl:NamedIndividual ,
-                           <http://purl.org/linked-data/cube#MeasureProperty> .
-
-
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros
-:numero-extranjeros rdf:type owl:NamedIndividual ,
-                             <http://purl.org/linked-data/cube#MeasureProperty> .
-
-
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-personas
 :numero-personas rdf:type owl:NamedIndividual ,
                           <http://purl.org/linked-data/cube#MeasureProperty> .
@@ -306,11 +273,6 @@
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven
 :porcentaje-de-poblacion-joven rdf:type owl:NamedIndividual ,
                                         <http://purl.org/linked-data/cube#MeasureProperty> .
-
-
-###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia
-:provincia-procedencia rdf:type owl:NamedIndividual ,
-                                <http://purl.org/linked-data/cube#MeasureProperty> .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad
@@ -397,27 +359,6 @@
                                 "Índice de tendencia"@es .
 
 
-:municipio-procedencia rdfs:comment "Municipality of origin name."@en ,
-                                    "Nombre del municipio de procedencia"@es ;
-                       rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
-                       rdfs:label "Municipality of origin"@en ,
-                                  "Municipio de procedencia"@es .
-
-
-:numero-espanoles rdfs:comment "Number of Spanish people."@en ,
-                               "Número de españoles"@es ;
-                  rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
-                  rdfs:label "Numero de españoles"@es ,
-                             "number of Spanish"@en .
-
-
-:numero-extranjeros rdfs:comment "Number of foreign people."@en ,
-                                 "Número de extranjeros"@es ;
-                    rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
-                    rdfs:label "Number of foreign"@en ,
-                               "Número de extranjeros"@es .
-
-
 :numero-personas rdfs:comment "Number of people."@en ,
                               "Número de personas"@es ;
                  rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
@@ -465,13 +406,6 @@
                                rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
                                rdfs:label "Percentaje of young population"@en ,
                                           "Porcentaje de población joven"@es .
-
-
-:provincia-procedencia rdfs:comment "Nombre de la provincia de procedencia"@es ,
-                                    "Province of origin name"@en ;
-                       rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
-                       rdfs:label "Province of origin"@en ,
-                                  "Provincia de procedencia"@es .
 
 
 :tasa-de-mortalidad rdfs:comment "Deaths per 1.000 inhabitants."@en ,

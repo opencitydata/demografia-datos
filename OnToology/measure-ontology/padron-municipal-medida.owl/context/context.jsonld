@@ -40,10 +40,6 @@
       "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-adulta",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"
     },
-    "numero-extranjeros" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-extranjeros",
-      "@type" : "http://www.w3.org/2001/XMLSchema#double"
-    },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
@@ -65,10 +61,6 @@
     "identifier" : {
       "@id" : "http://purl.org/dc/elements/1.1/identifier"
     },
-    "numero-espanoles" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#numero-espanoles",
-      "@type" : "http://www.w3.org/2001/XMLSchema#double"
-    },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
     },
@@ -78,9 +70,6 @@
     },
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
-    },
-    "municipio-procedencia" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#municipio-procedencia"
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
@@ -95,9 +84,6 @@
     "indice-de-feminidad" : {
       "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-feminidad",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"
-    },
-    "provincia-procedencia" : {
-      "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#provincia-procedencia"
     },
     "indice-de-poblacion-activa" : {
       "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-poblacion-activa",

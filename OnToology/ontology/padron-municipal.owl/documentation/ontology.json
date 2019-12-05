@@ -539,6 +539,9 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/linked-data/cube#DimensionProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -1088,16 +1091,13 @@
   } ]
 }, {
   "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#DimensionProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Enlace entre el habitante y el municipio de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el municipio anterior de residencia del habitante."
   }, {
     "@language" : "en",
     "@value" : "Link from an inhabitant and the municipality of origin. When the variation is defined by a register the previous municipality of residence can be especified."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal"
@@ -1332,16 +1332,13 @@
   } ]
 }, {
   "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#DimensionProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Enlace entre el habitante y el país de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el país de donde viene el habitante."
   }, {
     "@language" : "en",
     "@value" : "Link from an inhabitant and the country of origin. When the variation is defined by a register the previous country of residence can be especified."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal"
@@ -1413,16 +1410,13 @@
   } ]
 }, {
   "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#DimensionProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Enlace entre el habitante y la provincia de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse la provincia anterior de residencia del habitante."
   }, {
     "@language" : "en",
     "@value" : "Link from an inhabitant and the province of origin. When the variation is defined by a register the previous province of residence can be especified."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal"

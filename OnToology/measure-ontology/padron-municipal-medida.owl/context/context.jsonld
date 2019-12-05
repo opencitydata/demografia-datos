@@ -85,6 +85,10 @@
       "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-feminidad",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"
     },
+    "porcentaje-de-poblacion-nacida-en-el-extranjero" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-nacida-en-el-extranjero",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
     "indice-de-poblacion-activa" : {
       "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#indice-de-poblacion-activa",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"

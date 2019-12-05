@@ -216,13 +216,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia
 :municipioProcedencia rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Habitante ;
-                      rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> ;
-                      rdfs:comment "Enlace entre el habitante y el municipio de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el municipio anterior de residencia del habitante."@es ,
-                                   "Link from an inhabitant and the municipality of origin. When the variation is defined by a register the previous municipality of residence can be especified."@en ;
-                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
-                      rdfs:label "Municipality of origin"@en ,
-                                 "Municipio de procedencia"@es .
+                      rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioResidencia
@@ -290,13 +284,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia
 :paisProcedencia rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Habitante ;
-                 rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Pais> ;
-                 rdfs:comment "Enlace entre el habitante y el país de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el país de donde viene el habitante."@es ,
-                              "Link from an inhabitant and the country of origin. When the variation is defined by a register the previous country of residence can be especified."@en ;
-                 rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
-                 rdfs:label "Country of origin"@en ,
-                            "País de procedencia"@es .
+                 rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Pais> .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaDestino
@@ -324,13 +312,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia
 :provinciaProcedencia rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Habitante ;
-                      rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> ;
-                      rdfs:comment "Enlace entre el habitante y la provincia de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse la provincia anterior de residencia del habitante."@es ,
-                                   "Link from an inhabitant and the province of origin. When the variation is defined by a register the previous province of residence can be especified."@en ;
-                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
-                      rdfs:label "Province of origin"@en ,
-                                 "Provincia de procedencia"@es .
+                      rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaResidencia
@@ -503,6 +485,10 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> rdf:type owl:Class .
+
 
 ###  http://schema.org/Embassy
 <http://schema.org/Embassy> rdf:type owl:Class ;
@@ -792,6 +778,21 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
 #    Individuals
 #################################################################
 
+###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia
+:municipioProcedencia rdf:type owl:NamedIndividual ,
+                               <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia
+:paisProcedencia rdf:type owl:NamedIndividual ,
+                          <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia
+:provinciaProcedencia rdf:type owl:NamedIndividual ,
+                               <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
 ###  http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad
 <http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad> rdf:type owl:NamedIndividual ,
                                                                                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
@@ -812,4 +813,29 @@ These levels are represented by the concept list: http://vocab.linkeddata.es/dat
                                                                                                    <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
-###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+#################################################################
+#    Annotations
+#################################################################
+
+:municipioProcedencia rdfs:comment "Enlace entre el habitante y el municipio de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el municipio anterior de residencia del habitante."@es ,
+                                   "Link from an inhabitant and the municipality of origin. When the variation is defined by a register the previous municipality of residence can be especified."@en ;
+                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
+                      rdfs:label "Municipality of origin"@en ,
+                                 "Municipio de procedencia"@es .
+
+
+:paisProcedencia rdfs:comment "Enlace entre el habitante y el país de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el país de donde viene el habitante."@es ,
+                              "Link from an inhabitant and the country of origin. When the variation is defined by a register the previous country of residence can be especified."@en ;
+                 rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
+                 rdfs:label "Country of origin"@en ,
+                            "País de procedencia"@es .
+
+
+:provinciaProcedencia rdfs:comment "Enlace entre el habitante y la provincia de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse la provincia anterior de residencia del habitante."@es ,
+                                   "Link from an inhabitant and the province of origin. When the variation is defined by a register the previous province of residence can be especified."@en ;
+                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> ;
+                      rdfs:label "Province of origin"@en ,
+                                 "Provincia de procedencia"@es .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

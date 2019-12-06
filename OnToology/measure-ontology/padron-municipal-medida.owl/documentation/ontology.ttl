@@ -168,6 +168,11 @@
                                rdfs:range xsd:double .
 
 
+###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-nacida-en-el-extranjero
+:porcentaje-de-poblacion-nacida-en-el-extranjero rdf:type owl:DatatypeProperty ;
+                                                 rdfs:range xsd:double .
+
+
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad
 :tasa-de-mortalidad rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:double .
@@ -273,6 +278,11 @@
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-joven
 :porcentaje-de-poblacion-joven rdf:type owl:NamedIndividual ,
                                         <http://purl.org/linked-data/cube#MeasureProperty> .
+
+
+###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-nacida-en-el-extranjero
+:porcentaje-de-poblacion-nacida-en-el-extranjero rdf:type owl:NamedIndividual ,
+                                                          <http://purl.org/linked-data/cube#MeasureProperty> .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#tasa-de-mortalidad
@@ -387,11 +397,11 @@
                                                "Porcentaje de población envejecida"@es .
 
 
-:porcentaje-de-poblacion-extranjera rdfs:comment "Percentage of foreign population over the total population."@en ,
-                                                 "Porcentaje entre la población extranjera con respecto al total de la población."@es ;
+:porcentaje-de-poblacion-extranjera rdfs:comment "Percentage of foreign nationality population over the total population."@en ,
+                                                 "Porcentaje entre la población con nacionalidad extranjera con respecto al total de la población."@es ;
                                     rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
-                                    rdfs:label "Percentage of foreign population"@en ,
-                                               "Porcentaje de población extranjera"@es .
+                                    rdfs:label "Percentage of foreign  nationality population"@en ,
+                                               "Porcentaje de población de nacionalidad extranjera"@es .
 
 
 :porcentaje-de-poblacion-infantil-extranjera rdfs:comment "Percentage of foreign population under 15 years."@en ,
@@ -406,6 +416,13 @@
                                rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
                                rdfs:label "Percentaje of young population"@en ,
                                           "Porcentaje de población joven"@es .
+
+
+:porcentaje-de-poblacion-nacida-en-el-extranjero rdfs:comment "Percentage of population born abroad over the total population."@en ,
+                                                              "Porcentaje de población de nacida en el extranjero sobre el total de población"@es ;
+                                                 rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida> ;
+                                                 rdfs:label "Percentage of population born abroad"@en ,
+                                                            "Porcentaje de población nacida en el extranjero"@es .
 
 
 :tasa-de-mortalidad rdfs:comment "Deaths per 1.000 inhabitants."@en ,

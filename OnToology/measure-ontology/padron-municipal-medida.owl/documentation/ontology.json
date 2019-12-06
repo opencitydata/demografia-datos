@@ -427,20 +427,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#MeasureProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Percentage of foreign population over the total population."
+    "@value" : "Percentage of foreign nationality population over the total population."
   }, {
     "@language" : "es",
-    "@value" : "Porcentaje entre la población extranjera con respecto al total de la población."
+    "@value" : "Porcentaje entre la población con nacionalidad extranjera con respecto al total de la población."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Percentage of foreign population"
+    "@value" : "Percentage of foreign  nationality population"
   }, {
     "@language" : "es",
-    "@value" : "Porcentaje de población extranjera"
+    "@value" : "Porcentaje de población de nacionalidad extranjera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
@@ -487,6 +487,29 @@
   }, {
     "@language" : "es",
     "@value" : "Porcentaje de población joven"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#porcentaje-de-poblacion-nacida-en-el-extranjero",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/linked-data/cube#MeasureProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Percentage of population born abroad over the total population."
+  }, {
+    "@language" : "es",
+    "@value" : "Porcentaje de población de nacida en el extranjero sobre el total de población"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Percentage of population born abroad"
+  }, {
+    "@language" : "es",
+    "@value" : "Porcentaje de población nacida en el extranjero"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"

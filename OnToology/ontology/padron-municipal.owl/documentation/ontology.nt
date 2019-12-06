@@ -197,13 +197,7 @@
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlace entre el habitante y el municipio de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el municipio anterior de residencia del habitante."@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an inhabitant and the municipality of origin. When the variation is defined by a register the previous municipality of residence can be especified."@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality of origin"@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio de procedencia"@es .
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioResidencia
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioResidencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -269,13 +263,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Pais> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlace entre el habitante y el país de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el país de donde viene el habitante."@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an inhabitant and the country of origin. When the variation is defined by a register the previous country of residence can be especified."@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Country of origin"@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "País de procedencia"@es .
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaDestino
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -300,13 +288,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#Habitante> .
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Provincia> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlace entre el habitante y la provincia de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse la provincia anterior de residencia del habitante."@es .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an inhabitant and the province of origin. When the variation is defined by a register the previous province of residence can be especified."@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Province of origin"@en .
-<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia de procedencia"@es .
 # 
 # http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaResidencia
 <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaResidencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -485,6 +467,9 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://schema.org/Embassy
 <http://schema.org/Embassy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -763,6 +748,18 @@ _:genid56 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # #################################################################
 # 
 # 
+# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
+# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
+# http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
 # http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad
 <http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-documento-identidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
@@ -779,4 +776,31 @@ _:genid56 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-variacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://vocab.linkeddata.es/datosabiertos/kos/demografia/padron-municipal/tipo-variacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
-# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlace entre el habitante y el municipio de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el municipio anterior de residencia del habitante."@es .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an inhabitant and the municipality of origin. When the variation is defined by a register the previous municipality of residence can be especified."@en .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality of origin"@en .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#municipioProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio de procedencia"@es .
+# 
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlace entre el habitante y el país de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse el país de donde viene el habitante."@es .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an inhabitant and the country of origin. When the variation is defined by a register the previous country of residence can be especified."@en .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Country of origin"@en .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "País de procedencia"@es .
+# 
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlace entre el habitante y la provincia de procedencia. Cuando la variación del Padrón sea por un alta puede especificarse la provincia anterior de residencia del habitante."@es .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an inhabitant and the province of origin. When the variation is defined by a register the previous province of residence can be especified."@en .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal> .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Province of origin"@en .
+<http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal#provinciaProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia de procedencia"@es .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

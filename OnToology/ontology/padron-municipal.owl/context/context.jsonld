@@ -135,6 +135,9 @@
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
+    "DimensionProperty" : {
+      "@id" : "http://purl.org/linked-data/cube#DimensionProperty"
+    },
     "Distrito" : {
       "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"
     },

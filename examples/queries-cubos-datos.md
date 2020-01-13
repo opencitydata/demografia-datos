@@ -146,12 +146,12 @@ CONSTRUCT {
   ?uriObs sdmx-dimension:refPeriod <http://reference.data.gov.uk/id/year/2019> .
   ?uriObs sdmx-dimension:sexo ?genderKOS .
   ?uriObs iaest-dimension:edad-grupos-quinquenales ?grupoQuinquenal .
-  ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
+  ?uriObs iaest-dimension:nacionalidad ?nacionalidadSchema.
   ?uriObs espad-medida:numero-personas ?numPersonas .
 }
 WHERE
 {
-SELECT DISTINCT ?uriObs ?distritoResidencia ?genderKOS ?nacionalidad ?grupoQuinquenal (COUNT(DISTINCT ?x) AS ?numPersonas)
+SELECT DISTINCT ?uriObs ?distritoResidencia ?genderKOS ?nacionalidadSchema ?grupoQuinquenal (COUNT(DISTINCT ?x) AS ?numPersonas)
 WHERE {
   ?x a espad:Habitante .
   ?x espad:activo ?activo .
@@ -185,30 +185,41 @@ WHERE {
                                           "https://opendata.aragon.es/kos/iaest/edad-grupos-quinquenales/95-y-mas")))))))))))))))))))) AS ?grupoQuinquenal)
   BIND(IRI(CONCAT("http://vocab.ciudadesabiertas.es/recurso/demografia/padron-municipal/",md5(xsd:string(CONCAT(?distritoResidencia,?gender,?grupoQuinquenal,?nacionalidad))))) AS ?uriObs)
   BIND(IF(?gender = schema:Male, <http://purl.org/linked-data/sdmx/2009/code#sex-M>, <http://purl.org/linked-data/sdmx/2009/code#sex-F>) AS ?genderKOS)
+  BIND(IRI(
+    IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/108>, "https://opendata.aragon.es/kos/iaest/nacionalidad/espanoles",
+      IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/126>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+        IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/102>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+          IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/103>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+              IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/104>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/106>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                  IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/146>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                    IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/107>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                      IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/144>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                        IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/147>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                          IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/141>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                            IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/109>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                              IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/110>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/111>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                  IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/112>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                    IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/113>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                      IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/115>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                        IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/136>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                          IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/142>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                            IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/117>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                              IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/118>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                                IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/121>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                                  IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/122>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                                    IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/123>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                                      IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/143>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                                        IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/128>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                                          IF(?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/131>, "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27",
+                                                            "https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-no-comunitarios")))))))))))))))))))))))))))) AS ?nacionalidadSchema)
   }
 }
+
 ```
 #### Ejemplos
-a) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0A%0D%0ASELECT+%28sum+%28%3Fx%29+AS+%3FnumeroExtranjeros%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%21%3D+%3Chttps%3A%2F%2Fvocab.linkeddata.es%2Frecurso%2Fterritorio%2Fpais%2F108%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera.
-
-```
-PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
-PREFIX kos-year: <http://reference.data.gov.uk/id/year/>
-PREFIX espad-medida: <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#>
-PREFIX iaest-dimension: <http://opendata.aragon.es/def/iaest/dimension#>
-
-
-SELECT (sum (?x) AS ?numeroExtranjeros) WHERE {
-  ?uriObs a qb:Observation .
-  ?uriObs sdmx-dimension:refPeriod kos-year:2019 .
-  ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
-  FILTER (?nacionalidad != <https://vocab.linkeddata.es/recurso/territorio/pais/108>)
-  ?uriObs espad-medida:numero-personas ?x .
-}
-
-```
-b) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%28sum+%28%3Fx%29+AS+%3FnumeroExtranjeros%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%3D+%3Chttps%3A%2F%2Fvocab.linkeddata.es%2Frecurso%2Fterritorio%2Fpais%2F108%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población española.
+a) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%28sum+%28%3Fx%29+AS+%3FnumeroExtranjeros%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%21%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fnacionalidad%2Fespanoles%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera.
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -221,12 +232,30 @@ SELECT (sum (?x) AS ?numeroExtranjeros) WHERE {
   ?uriObs a qb:Observation .
   ?uriObs sdmx-dimension:refPeriod kos-year:2019 .
   ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
-  FILTER (?nacionalidad = <https://vocab.linkeddata.es/recurso/territorio/pais/108>)
+  FILTER (?nacionalidad != <https://opendata.aragon.es/kos/iaest/nacionalidad/espanoles>)
   ?uriObs espad-medida:numero-personas ?x .
 }
 
 ```
-c) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%3Fsexo+%2C%28sum+%28%3Fx%29+AS+%3FnumeroExtranjeros%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%21%3D+%3Chttps%3A%2F%2Fvocab.linkeddata.es%2Frecurso%2Fterritorio%2Fpais%2F108%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A++%3FuriObs+sdmx-dimension%3Asexo+%3Fsexo%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera según sexo.
+b) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%28sum+%28%3Fx%29+AS+%3FnumeroEspanoles%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fnacionalidad%2Fespanoles%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población española.
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+PREFIX kos-year: <http://reference.data.gov.uk/id/year/>
+PREFIX espad-medida: <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#>
+PREFIX iaest-dimension: <http://opendata.aragon.es/def/iaest/dimension#>
+
+SELECT (sum (?x) AS ?numeroEspanoles) WHERE {
+  ?uriObs a qb:Observation .
+  ?uriObs sdmx-dimension:refPeriod kos-year:2019 .
+  ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
+  FILTER (?nacionalidad = <https://opendata.aragon.es/kos/iaest/nacionalidad/espanoles>)
+  ?uriObs espad-medida:numero-personas ?x .
+}
+
+```
+c) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%3Fsexo+%2C%28sum+%28%3Fx%29+AS+%3FnumeroExtranjeros%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%21%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fnacionalidad%2Fespanoles%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A++%3FuriObs+sdmx-dimension%3Asexo+%3Fsexo%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera según sexo.
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
@@ -238,12 +267,12 @@ SELECT ?sexo ,(sum (?x) AS ?numeroExtranjeros) WHERE {
   ?uriObs a qb:Observation .
   ?uriObs sdmx-dimension:refPeriod kos-year:2019 .
   ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
-  FILTER (?nacionalidad != <https://vocab.linkeddata.es/recurso/territorio/pais/108>)
+  FILTER (?nacionalidad != <https://opendata.aragon.es/kos/iaest/nacionalidad/espanoles>)
   ?uriObs espad-medida:numero-personas ?x .
   ?uriObs sdmx-dimension:sexo ?sexo
 }
 ```
-d) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%3Fsexo%2C%28sum+%28%3Fx%29+AS+%3FnumeroExtranjeros%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A%0D%0A++FILTER+%28%3Fnacionalidad+%21%3D+%3Chttps%3A%2F%2Fvocab.linkeddata.es%2Frecurso%2Fterritorio%2Fpais%2F108%3E%29%0D%0A++%3FuriObs+sdmx-dimension%3ArefArea+%3Chttp%3A%2F%2Fvocab.linkeddata.es%2Frecurso%2Fterritorio%2Fdistrito%2F79610%3E+.%0D%0A++%3FuriObs+iaest-dimension%3Aedad-grupos-quinquenales+%3FgruposQuinquenales.%0D%0A%0D%0A+++FILTER+%28%3FgruposQuinquenales+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fedad-grupos-quinquenales%2F00-a-04%3E+%7C%7C+%3FgruposQuinquenales+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fedad-grupos-quinquenales%2F05-a-09%3E+%7C%7C+%3FgruposQuinquenales+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fedad-grupos-quinquenales%2F10-a-14%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A++%3FuriObs+sdmx-dimension%3Asexo+%3Fsexo%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera según sexo y rango de edad que habita en cierta área. Concretamente la población total de extranjeros según sexo en el rango de edad de 0 a 14 años que habita en el distrito Latina.
+d) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%3Fsexo%2C%28sum+%28%3Fx%29+AS+%3FnumeroExtranjeros%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A%0D%0A++FILTER+%28%3Fnacionalidad+%21%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fnacionalidad%2Fespanoles%3E%29%0D%0A++%3FuriObs+sdmx-dimension%3ArefArea+%3Chttp%3A%2F%2Fvocab.linkeddata.es%2Frecurso%2Fterritorio%2Fdistrito%2F79610%3E+.%0D%0A++%3FuriObs+iaest-dimension%3Aedad-grupos-quinquenales+%3FgruposQuinquenales.%0D%0A%0D%0A+++FILTER+%28%3FgruposQuinquenales+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fedad-grupos-quinquenales%2F00-a-04%3E+%7C%7C+%3FgruposQuinquenales+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fedad-grupos-quinquenales%2F05-a-09%3E+%7C%7C+%3FgruposQuinquenales+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fedad-grupos-quinquenales%2F10-a-14%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A++%3FuriObs+sdmx-dimension%3Asexo+%3Fsexo%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera según sexo y rango de edad que habita en cierta área. Concretamente la población total de extranjeros según sexo en el rango de edad de 0 a 14 años que habita en el distrito Latina.
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -257,7 +286,7 @@ SELECT ?sexo,(sum (?x) AS ?numeroExtranjeros) WHERE {
   ?uriObs sdmx-dimension:refPeriod kos-year:2019 .
   ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
 
-  FILTER (?nacionalidad != <https://vocab.linkeddata.es/recurso/territorio/pais/108>)
+  FILTER (?nacionalidad != <https://opendata.aragon.es/kos/iaest/nacionalidad/espanoles>)
   ?uriObs sdmx-dimension:refArea <http://vocab.linkeddata.es/recurso/territorio/distrito/79610> .
   ?uriObs iaest-dimension:edad-grupos-quinquenales ?gruposQuinquenales.
 
@@ -267,8 +296,8 @@ SELECT ?sexo,(sum (?x) AS ?numeroExtranjeros) WHERE {
 }
 
 ```
+e) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%28sum+%28%3Fx%29+AS+%3FnumeroExtranjerosNoComunitarios%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fnacionalidad%2Fextranjeros-no-comunitarios%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera no comunitaria.
 
-En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%3Fnacionalidad+%28sum+%28%3Fx%29+AS+%3FnumeroPersonas%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población según país de nacionalidad.
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -277,10 +306,30 @@ PREFIX kos-year: <http://reference.data.gov.uk/id/year/>
 PREFIX espad-medida: <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#>
 PREFIX iaest-dimension: <http://opendata.aragon.es/def/iaest/dimension#>
 
-SELECT ?nacionalidad (sum (?x) AS ?numeroPersonas) WHERE {
+SELECT (sum (?x) AS ?numeroExtranjerosNoComunitarios) WHERE {
   ?uriObs a qb:Observation .
   ?uriObs sdmx-dimension:refPeriod kos-year:2019 .
   ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
+  FILTER (?nacionalidad = <https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-no-comunitarios>)
+  ?uriObs espad-medida:numero-personas ?x .
+}
+
+```
+
+f) En la siguiente [consulta](http://ciudadesabiertas.linkeddata.es/sparql?default-graph-uri=http%3A%2F%2Fciudadesabiertas.linkeddata.es%2Fcubo-datos%2Fpoblacion-por-nacionalidad&query=PREFIX+qb%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+kos-year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+espad-medida%3A+%3Chttp%3A%2F%2Fvocab.ciudadesabiertas.es%2Fdef%2Fdemografia%2Fpadron-municipal%2Fmedida%23%3E%0D%0APREFIX+iaest-dimension%3A+%3Chttp%3A%2F%2Fopendata.aragon.es%2Fdef%2Fiaest%2Fdimension%23%3E%0D%0A%0D%0ASELECT+%28sum+%28%3Fx%29+AS+%3FnumeroExtranjerosComunitarios%29+WHERE+%7B%0D%0A++%3FuriObs+a+qb%3AObservation+.%0D%0A++%3FuriObs+sdmx-dimension%3ArefPeriod+kos-year%3A2019+.%0D%0A++%3FuriObs+iaest-dimension%3Anacionalidad+%3Fnacionalidad.%0D%0A++FILTER+%28%3Fnacionalidad+%3D+%3Chttps%3A%2F%2Fopendata.aragon.es%2Fkos%2Fiaest%2Fnacionalidad%2Fextranjeros-comunitarios-ue-27%3E%29%0D%0A++%3FuriObs+espad-medida%3Anumero-personas+%3Fx+.%0D%0A%7D&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+) se obtiene el total de población extranjera comunitaria.
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+PREFIX kos-year: <http://reference.data.gov.uk/id/year/>
+PREFIX espad-medida: <http://vocab.ciudadesabiertas.es/def/demografia/padron-municipal/medida#>
+PREFIX iaest-dimension: <http://opendata.aragon.es/def/iaest/dimension#>
+
+SELECT (sum (?x) AS ?numeroExtranjerosComunitarios) WHERE {
+  ?uriObs a qb:Observation .
+  ?uriObs sdmx-dimension:refPeriod kos-year:2019 .
+  ?uriObs iaest-dimension:nacionalidad ?nacionalidad.
+  FILTER (?nacionalidad = <https://opendata.aragon.es/kos/iaest/nacionalidad/extranjeros-comunitarios-ue-27>)
   ?uriObs espad-medida:numero-personas ?x .
 }
 
